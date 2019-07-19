@@ -1,0 +1,49 @@
+{
+  "name": "electrontest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dist": "electron-builder --win --x64",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron . development",
+    "build": "node build.js",
+    "pack": "electron-packager . first_app --platform=win32,darwin --arch=x64 --out=./dist"
+  },
+  "dependencies": {
+    "ffmpeg": "0.0.4"
+  },
+  "devDependencies": {
+    "electron-builder": "^20.43.0",
+    "electron": "^5.0.3",
+    "electron-winstaller": "^3.0.4"
+  },
+  "build": {
+    "appId": "com.xxx.app",
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "asar": true,
+    "asarUnpack": [
+      "**/mc0314/**",
+      "**/CodePKu-Python/**",
+      "**/start.bat"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": true
+    }
+  },
+  "author": "",
+  "license": "ISC"
+}

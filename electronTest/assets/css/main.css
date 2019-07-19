@@ -1,0 +1,14 @@
+html{
+    -webkit-app-region: drag
+}
+
+#btn-a{
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+#btn-v{
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
