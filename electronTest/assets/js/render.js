@@ -81,31 +81,31 @@ document.getElementById('devButton').onclick = (e) => {
     console.log('clicked')
 }
 
-// document.getElementById('btn-a').addEventListener('click',function(e){
-//     navigator.getUserMedia({audio: true}, ()=>{
-//         console.log('success')
-//     },()=>{
-//         console.log('faile');
-//     })
-// })
-// let media_video = document.getElementById('media-v');
-// document.getElementById('btn-v').addEventListener('click',function(e){
-//     navigator.mediaDevices.getUserMedia({
-//         audio: true,
-//         video: {
-//           width: { min: 320, ideal: 1280, max: 1920 },
-//           height: { min: 340, ideal: 720, max: 1080 }
-//         }
-//       }).then((stream)=>{
-//         media_video.srcObject = stream
-//         console.log('success')
-//     }).catch(()=>{
-//         console.log('faile');
-//     })
-// })
+document.getElementById('btn-a').addEventListener('click',function(e){
+    navigator.getUserMedia({audio: true}, ()=>{
+        console.log('success')
+    },()=>{
+        console.log('faile');
+    })
+})
+let media_video = document.getElementById('media-v');
+document.getElementById('btn-v').addEventListener('click',function(e){
+    navigator.mediaDevices.getUserMedia({
+        audio: true,
+        video: {
+          width: { min: 320, ideal: 1280, max: 1920 },
+          height: { min: 340, ideal: 720, max: 1080 }
+        }
+      }).then((stream)=>{
+        media_video.srcObject = stream
+        console.log('success')
+    }).catch(()=>{
+        console.log('faile');
+    })
+})
 
-// window.onbeforeunload = (e) => { 
-//     // e.returnValue = window.confirm('确认关闭？') ? undefined : false;
-//     return 'undefined'
-// }
+window.onbeforeunload = (e) => { 
+    // e.returnValue = window.confirm('确认关闭？') ? undefined : false;
+    return 'undefined'
+}
 

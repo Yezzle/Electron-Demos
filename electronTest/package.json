@@ -4,7 +4,7 @@
   "description": "",
   "main": "main.js",
   "scripts": {
-    "dist": "electron-builder --win --x64",
+    "dist": "electron-builder --win --ia32 --x64",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron . development",
     "build": "node build.js",
